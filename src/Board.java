@@ -53,6 +53,7 @@ public class Board {
 	public Animal takeTurn() {
 		for (Animal a : animalsOnBoard) {
 			if (a.isDead()) continue;
+			if (getWinner() != null) break;
 			move(a);
 			printBoard();
 		}
@@ -66,7 +67,7 @@ public class Board {
 		RowColPair currentPos = findAnimal(anim);
 		RowColPair distance = anim.nextMove();
 		RowColPair newPos = movePosition(currentPos, distance);
-		System.out.println(newPos);
+		//System.out.println(newPos);
 		Animal a = board[newPos.getRow()][newPos.getCol()];
 		System.out.println(anim + " moved from " + currentPos + " + " + distance + " to " + newPos);
 		Animal winner = anim;
@@ -138,9 +139,8 @@ public class Board {
 				c++;
 			}
 		}
-		if (c > 1) {
-			return null;
-		}
+		if (c > 1) return null;
+		
 		return result;
 	}
 	

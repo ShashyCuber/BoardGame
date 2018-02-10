@@ -1,4 +1,4 @@
-
+//Shashwat Sparsh
 public class Bird extends Animal {
 	
 	private int power = 3;
@@ -14,7 +14,7 @@ public class Bird extends Animal {
 	@Override
 	public String name() {
 		// TODO Auto-generated method stub
-		return "bird";
+		return "Bird";
 	}
 
 	@Override

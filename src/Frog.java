@@ -1,4 +1,4 @@
-
+//Shashwat Sparsh
 public class Frog extends Animal {
 	//private int numMoves;
 	private int power = 6;
